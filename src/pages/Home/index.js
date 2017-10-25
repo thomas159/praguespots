@@ -17,7 +17,7 @@ export default class Home extends React.Component {
       <Wrap>
         <Slider />
         {/* <HomeReviews /> */}
-        <Section bg="#282828">
+        <Section bg="#eee">
           <Container paddingTop>
             <CategoriesMultiple />
           </Container>

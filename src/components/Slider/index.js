@@ -29,23 +29,38 @@ const NextArrow = styled.button`
 `
 
 const PrevArrow = styled.button`
-position: absolute;
-height: 40px;
-width: 40px;
-left: 20px;
-top: 50%;
-color: #fff;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 20px;
+  top: 50%;
+  color: #fff;
 
-border: 2px solid #fff;
-outline: 0;
-border-radius: 50%;
-margin-top: -20px;
-font-size: 20px;
-line-height: 0.5;
+  border: 2px solid #fff;
+  outline: 0;
+  border-radius: 50%;
+  margin-top: -20px;
+  font-size: 20px;
+  line-height: 0.5;
 `
 
+const Text = styled.div`
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  align-items: center;
+  background: rgba(0,0,0, .2);
+
+`
+
+
 const slides = [
-  { id: 1, img: 'https://dl.dropboxusercontent.com/s/f3s8lyj8gavzd4e/prague.jpg?dl=0' },
+  { id: 1, img: 'https://dl.dropboxusercontent.com/s/f3s8lyj8gavzd4e/prague.jpg?dl=0', text: ' explore the latest sights in Prague' },
   { id: 2, img: 'img2' },
   { id: 3, img: 'img3' },
   { id: 4, img: 'img4' },
@@ -78,6 +93,7 @@ export default class Slider extends React.Component {
           <div>
             {this.isShown(item.id) &&
               <ImgWrap bg={item.img}>
+                <Text>{item.text}</Text>
                 {item.id}
                 {/* <img src={item.img} alt="ndsd" /> */}
               </ImgWrap>

@@ -32,24 +32,15 @@ export const media = Object.keys(minSizes, maxSizes).reduce((accumulator, label)
 }, {})
 
 const Container = styled.div`
+  position: relative;
   color: #333;
   background: inherit;
 
-
-  ${media.giant`
-    position: relative;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 ;
-    ${props => props.padding && 'padding: 0 10px'}
-    ${props => props.paddingTop && 'padding: 40px 0'}
-
-  `}
-  ${media.desktop`
+  ${media.phone`
     position: relative;
     max-width: 1260px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 ;
     ${props => props.padding && 'padding: 0 10px'}
   `}
   ${media.tablet`
@@ -59,19 +50,20 @@ const Container = styled.div`
     padding: 0;
     ${props => props.padding && 'padding: 0 10px'}
   `}
-  ${media.phone`
+  ${media.desktop`
     position: relative;
     max-width: 1260px;
     margin: 0 auto;
-    padding: 0 ;
+    padding: 0;
     ${props => props.padding && 'padding: 0 10px'}
   `}
-  ${media.smphone`
+  ${media.giant`
     position: relative;
-    max-width: 1260px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 ;
     ${props => props.padding && 'padding: 0 10px'}
+    ${props => props.paddingTop && 'padding: 40px 0'}
   `}
 `
 
