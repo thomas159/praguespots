@@ -20,7 +20,10 @@ html {
 
 ul,li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 body {
   color:#282828;
   font-family: 'Lato', sans-serif;
@@ -31,4 +34,5 @@ body {
 .selected {
   color: #ff00ff;
 }
+
 `

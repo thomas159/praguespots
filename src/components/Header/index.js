@@ -1,6 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+// import { NavLink } from 'react-router-dom'
+import Nav from '../../components/atoms/Nav'
+
 import Container from '../../components/atoms/Container'
 // import Home from '../pages/Home'
 // import About from '../pages/About'
@@ -8,11 +10,10 @@ import Container from '../../components/atoms/Container'
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 20px;
+  height: auto;
 `
 
-const StyledNavLink = styled(NavLink)`
-  color: #ff0000;
+const StyledNavLink = styled(Nav)`
 `
 
 const Grid = styled.div`

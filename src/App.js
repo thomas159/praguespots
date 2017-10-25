@@ -23,21 +23,19 @@ class App extends React.Component {
     return (
       <Router>
         <ScrollToTop>
-          <div>
-            <Header />
-            <Wrapper>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/reviews" component={Reviews} />
-                <Route exact path="/reviews/:catId" component={Reviews} />
-                <Route exact path="/reviews/:catId/:slug" component={Review} />
-                <Route exact path="/" component={Home} />
-                {/* <ScrollToTop path="/reviews/:catId" component={Review} /> */}
-                {/* <ScrollToTop path="/another-page" component={Reviews} /> */}
-              </Switch>
-            </Wrapper>
-            <Footer />
-          </div>
+          <Header />
+          <Wrapper>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/reviews" component={Reviews} />
+              <Route exact path="/reviews/:catId" component={Reviews} />
+              <Route exact path="/reviews/:catId/:slug" component={Review} />
+              <Route exact path="/" component={Home} />
+              {/* <ScrollToTop path="/reviews/:catId" component={Review} /> */}
+              {/* <ScrollToTop path="/another-page" component={Reviews} /> */}
+            </Switch>
+          </Wrapper>
+          <Footer />
         </ScrollToTop>
       </Router>
     )
