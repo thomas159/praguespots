@@ -20,7 +20,7 @@ width: 100%;
 height: auto;
 padding: 10px 0 ;
 color: #fff;
-background: rgba(0,0,0,.4);
+background: rgba(0,0,0,.3);
 z-index: 1;
 text-align: center;
 `
@@ -58,11 +58,11 @@ const Image = (props) => {
 
   return (
     <ImageWrap>
+      <StyledImg src={`https://dl.dropboxusercontent.com/s/${img}`} />
       <Text>
         {link}
         { subText && <div>{subText}</div>}
       </Text>
-      <StyledImg src={`https://dl.dropboxusercontent.com/s/${img}`} />
       <Overlay />
     </ImageWrap>
   )

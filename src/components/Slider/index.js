@@ -19,13 +19,17 @@ const NextArrow = styled.button`
   right: 20px;
   top: 50%;
   color: #fff;
-
+  cursor: pointer;
   border: 2px solid #fff;
   outline: 0;
   border-radius: 50%;
   margin-top: -20px;
   font-size: 20px;
   line-height: 0.5;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const PrevArrow = styled.button`
@@ -34,14 +38,18 @@ const PrevArrow = styled.button`
   width: 40px;
   left: 20px;
   top: 50%;
+  cursor: pointer;
   color: #fff;
-
   border: 2px solid #fff;
   outline: 0;
   border-radius: 50%;
   margin-top: -20px;
   font-size: 20px;
   line-height: 0.5;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const Text = styled.div`
@@ -100,8 +108,8 @@ export default class Slider extends React.Component {
             }
           </div>,
         )}
-        <NextArrow onClick={this.handleNextSlide}>&#8680;</NextArrow>
-        <PrevArrow onClick={this.handlePrevSlide} >&#8678;</PrevArrow>
+        <NextArrow onClick={this.handleNextSlide}>&#62;</NextArrow>
+        <PrevArrow onClick={this.handlePrevSlide} >&#60;</PrevArrow>
       </Wrap>
     )
   }

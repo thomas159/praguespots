@@ -18,7 +18,7 @@ export default class Home extends React.Component {
         <Slider />
         {/* <HomeReviews /> */}
         <Section bg="#eee">
-          <Container paddingTop>
+          <Container padding40>
             <CategoriesMultiple />
           </Container>
         </Section>

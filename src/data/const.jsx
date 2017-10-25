@@ -97,7 +97,7 @@ const categories = [
     cat: ' things to do',
     slug: 'things-to-do',
     hero: '30bcgle3aeb1jml/fooddrink.jpg?dl=00bcgle3aeb1jml/fooddrink.jpg?dl=0',
-    img: '2d00cayrntvsn6h/dancingHouse.jpg?dl=0',
+    img: 'ojovzly14barxzd/pragueDark.jpg?dl=0',
     sub: [
       {
         id: 1,
@@ -150,7 +150,7 @@ const categories = [
     cat: ' nightlife',
     slug: 'nightlife',
     hero: '30bcgle3aeb1jml/fooddrink.jpg?dl=00bcgle3aeb1jml/fooddrink.jpg?dl=0',
-    img: 'xswa486sl7o1j03/curry-buffet.jpg?dl=0',
+    img: 'gzjaz63eyzfab2y/pragueBeer.jpg?dl=0',
     sub: [
       {
         id: 1,

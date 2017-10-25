@@ -55,15 +55,14 @@ const Container = styled.div`
     max-width: 1260px;
     margin: 0 auto;
     padding: 0;
-    ${props => props.padding && 'padding: 0 10px'}
+    ${props => props.padding40 && 'padding: 40px'}
   `}
   ${media.giant`
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 ;
-    ${props => props.padding && 'padding: 0 10px'}
-    ${props => props.paddingTop && 'padding: 40px 0'}
+    ${props => props.padding40 && 'padding: 40px'}
   `}
 `
 
