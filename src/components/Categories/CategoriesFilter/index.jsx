@@ -4,6 +4,7 @@ import { string } from 'prop-types'
 import categories from '../../../data/const'
 // import ReviewCard from '../../organisms/ReviewCard'
 import SubCatCard from '../components/SubCatCard'
+import { media } from '../../atoms/Container'
 
 const Grid = styled.div`
   display: flex;
@@ -14,6 +15,15 @@ const Grid = styled.div`
 const Cell = styled.div`
   flex: 0 0 100%;
   padding: 10px;
+  ${media.tablet`
+  flex: 0 0 50%;
+  `}
+  ${media.desktop`
+  flex: 0 0 33.333333%
+  `}
+  ${media.giant`
+  flex: 0 0 33.333333%
+  `}
 `
 
 export default class CategoriesFilter extends React.Component {

@@ -6,9 +6,11 @@ import Nav from '../../components/atoms/Nav'
 import { media } from '../../components/atoms/Container'
 
 const Wrapper = styled.div`
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: auto;
+  z-index: 9999;
 `
 
 const Container = styled.div`
@@ -16,6 +18,7 @@ const Container = styled.div`
   max-width: 1260px;
   padding: 20px;
   justify-content: center;
+  margin: 0 auto;
 `
 
 const StyledNavLink = styled(Nav)`
@@ -26,24 +29,39 @@ const Grid = styled.div`
   flex: 0 0 100%;
 `
 const Cell = styled.div`
+  &:nth-child(1) {
+  display: flex;
+  flex: 0 0 40%;
+  justify-content: flex-end
+  }  &:nth-child(2) {
+  display: flex;
   flex: 0 0 20%;
+  justify-content: center;
+  } &:nth-child(3) {
+  display: flex;
+  flex: 0 0 40%;
+  justify-content: flex-start;
+}
 `
 
 const Logo = styled.div`
-  font-size: 20px;
-  color: palevioletred;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
   font-weight: 700;
 `
 
-const Hide = styled.div`
-  display: none;
-${media.desktop`
-  display: block;
-`}
-${media.giant`
-  display: block;
-`}
-`
+// const Hide = styled.div`
+//   position: absolute;
+//   display: none;
+// ${media.desktop`
+//   display: block;
+// `}
+// ${media.giant`
+//   display: block;
+// `}
+// `
 
 const Hamburger = styled.div`
   position: absolute;
@@ -52,7 +70,18 @@ const Hamburger = styled.div`
   height: 100%;
   width: 80px;
   background: #000;
+  ${media.desktop`
+    display: none;
+  `}
+  ${media.giant`
+    display: none;
+  `}
 `
+
+// const SubCell = styled.div`
+//   flex: 0 0 50%;
+//   padding: 10px;
+// `
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -60,16 +89,19 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
       <Wrapper>
         <Container>
           <Hamburger />
-          <Logo>PragueSpots</Logo>
-          <Hide>
-            <Grid>
-              <Cell><StyledNavLink exact to="/" activeClassName="selected">Home</StyledNavLink></Cell>
-              <Cell><StyledNavLink to="/about" activeClassName="selected">About</StyledNavLink></Cell>
-              <Cell><StyledNavLink to="/reviews/food-and-drink" activeClassName="selected">Food & Drink</StyledNavLink></Cell>
-              <Cell><StyledNavLink to="/reviews/things-to-do" activeClassName="selected">Things to do</StyledNavLink></Cell>
-              <Cell><StyledNavLink to="/topics" activeClassName="selected">Topics</StyledNavLink></Cell>
-            </Grid>
-          </Hide>
+          <Grid>
+            <Cell>
+              <StyledNavLink to="/about" activeClassName="selected">About</StyledNavLink>
+              <StyledNavLink to="/about" activeClassName="selected">About</StyledNavLink>
+            </Cell>
+            <Cell>
+              <Logo>PragueSpots</Logo>
+            </Cell>
+            <Cell>
+              <StyledNavLink to="/reviews/food-and-drink" activeClassName="selected">Food & Drink</StyledNavLink>
+              <StyledNavLink to="/reviews/things-to-do" activeClassName="selected">Things to do</StyledNavLink>
+            </Cell>
+          </Grid>
         </Container>
       </Wrapper>
     )

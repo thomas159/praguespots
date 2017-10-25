@@ -5,12 +5,12 @@ const Nav = styled(NavLink)`
   display:flex;
   height:41px;
   background: inherit;
-  color:#ddd;
+  color:#fff;
   cursor:pointer;
   text-decoration:none;
   align-items:center;
   justify-content:center;
-  margin-top:5px;
+  padding: 0 10px;
   &:hover {
     background:#fff;
     color:#90Ba41;
